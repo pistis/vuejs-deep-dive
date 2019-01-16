@@ -11,4 +11,4 @@ Vue.js의 소스코드를 Line By Line 단위로 분석하며 프레임워크의
 - [Whats Coming Vue.js 3.0](v3.0/whats-coming-vuejs-3.0.md)
 
 ### Vue.js v2.5.21
-- To Be Continue...
+- [Reactivity in depth](v2.5.21/deep-dive-into-reactivity-in-depth.md)
