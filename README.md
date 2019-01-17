@@ -1,8 +1,10 @@
-# a deep dive in the vue.js (a.k.a Vue.js 톺아보기)
-Vue.js의 소스코드를 Line By Line 단위로 분석하며 프레임워크의 동작 방식과 사용된 기술들을 이해하기 위한 개인 프로젝트입니다.
+# Deep dive into vue.js (a.k.a Vue.js 톺아보기)
+Vue.js를 더욱 더 깊이 이해하기 위한 개인 프로젝트이다.
+특정 주제를 정해 관련 소스코드를 Line By Line 단위로 분석하고 브라우저 개발자도구를 통해 디버깅해보며 실제 동작을 이해한다.
+
 
 ## Roadmap
-- v2.5.21 분석
+- v2.5.21 소스코드 분석 및 이해하기
 - v3.0에 대한 tracking
 
 
