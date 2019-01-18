@@ -75,7 +75,7 @@ demo Root 컴포넌트의 javascript 코드를 보자.
 <img src="https://vuejs.org/images/lifecycle.png" width="600"/>
 
 
-**[그림-1](그림-1)은 위 라이프사이클과 함께 반응형 동작 방식을 좀 더 구체적으로 도식화 한것이다.**
+**[그림-1](http://drive.google.com/uc?export=view&id=1N0VqBqEfSvByYmcIGzSqhVvx6SOHyRVO)은 위 라이프사이클과 함께 반응형 동작 방식을 좀 더 구체적으로 도식화 한것이다.**
 ### 그림-1
 [![deep-dive-vue.js-v2.5.21-deep-dive-lifecycle][deep-dive-vue.js-v2.5.21-deep-dive-lifecycle]](http://drive.google.com/uc?export=view&id=1N0VqBqEfSvByYmcIGzSqhVvx6SOHyRVO)
 
@@ -83,7 +83,7 @@ demo Root 컴포넌트의 javascript 코드를 보자.
 언뜻 보면 그림이 매우 복잡해 보이지만 아래 친절한 가이드와 함께 Step을 하나씩 따라 가면서 관련된 코드를 보면 이해하기 어렵지 않을 것이다.
 
 
-다음은 [그림-1](그림-1)에 대한 가이드이다.  
+다음은 [그림-1](http://drive.google.com/uc?export=view&id=1N0VqBqEfSvByYmcIGzSqhVvx6SOHyRVO)에 대한 가이드이다.  
 - 라이프사이클
   - **실선화살표로 표현**되며 라이프사이클의 flow를 나타낸다.
   - 그림 우상단의 start _init() 부터 따라가며 코드를 살펴보자
@@ -94,10 +94,10 @@ demo Root 컴포넌트의 javascript 코드를 보자.
   - **빨간색 도형/점선화살표/텍스트로 표현**되며 데이터가 변경될 때 반응적으로 동작하는 flow를 나타낸다.
 
 
-> **[그림-1](그림-1)은 이 문서가 전달하고자 하는 반응형 동작을 간단하지만 모두 설명하는 그림이다.**
-> **이제부터는 [그림-1](그림-1)을 클릭하여 따로 브라우저창을 띄워놓고 문서와 같이 보면 이해하는데에 많은 도움이 될 것이다.**
+> **[그림-1](http://drive.google.com/uc?export=view&id=1N0VqBqEfSvByYmcIGzSqhVvx6SOHyRVO)은 이 문서가 전달하고자 하는 반응형 동작을 간단하지만 모두 설명하는 그림이다.**
+> **이제부터는 [그림-1](http://drive.google.com/uc?export=view&id=1N0VqBqEfSvByYmcIGzSqhVvx6SOHyRVO)을 클릭하여 따로 브라우저창을 띄워놓고 문서와 같이 보면 이해하는데에 많은 도움이 될 것이다.**
 
-**[그림-2](그림-2)는 우리가 주로 살펴볼 소스코드들이다.**
+**[그림-2](http://drive.google.com/uc?export=view&id=1fmUBwe0QCVk5Cqh8lZyRzlydSim8L0MD)는 우리가 주로 살펴볼 소스코드들이다.**
 ### 그림-2
 <img src="http://drive.google.com/uc?export=view&id=1fmUBwe0QCVk5Cqh8lZyRzlydSim8L0MD" width="600"/>
 
@@ -151,7 +151,7 @@ observe함수는 기본적으로 재귀적으로 동작한다. 전체 과정을 
 ### 그림-3
 [![deep-dive-vue.js-v2.5.21-deep-dive-observe][deep-dive-vue.js-v2.5.21-deep-dive-observe]](http://drive.google.com/uc?export=view&id=1KCzjQe3uvx7oib8742TALgenC8xsIf-v)
 
-[그림-3](그림-3)에서 빨간 부분이 가장 중요한 부분이다.  
+[그림-3](http://drive.google.com/uc?export=view&id=1KCzjQe3uvx7oib8742TALgenC8xsIf-v)에서 빨간 부분이 가장 중요한 부분이다.  
 
 ![core observer index js](http://drive.google.com/uc?export=view&id=1loEGiVY9aDYHyMT1rPL0n7BSUuXHr_hf)
 `observe` 함수는 객체 또는 배열 데이터(3~5줄)에 대해서만 Observer를 만들어 준다.  
@@ -160,7 +160,7 @@ observe함수는 기본적으로 재귀적으로 동작한다. 전체 과정을 
 아래는 Observer 클래스의 생성자 코드이다.  
 ![core observer constructor](http://drive.google.com/uc?export=view&id=1f8UnahQyu6E5QLVHx-Xgl4A0Fp-iTS4-)
 9줄에 보면 Dep Class의 인스턴스를 하나 생성한다. Dep은 뭘까?  
-[그림-1](그림-1) 좌측에 Dep과 Watcher 클래스의 관계도가 있다.  
+[그림-1](http://drive.google.com/uc?export=view&id=1N0VqBqEfSvByYmcIGzSqhVvx6SOHyRVO) 좌측에 Dep과 Watcher 클래스의 관계도가 있다.  
 
 잠시 의문을 접어두고 일단 다음을 보자.  
 11줄의 `def(value, '__ob__', this)`를 통해 vm._data객체에 `__ob__` 속성을 정의하고 Observer 인스턴스를 연결한다.  
@@ -179,7 +179,7 @@ Observer와 함께 `walk` 함수내에서는 이 과정에서 배열과 객체�
 value가 배열인 경우와 객체인 경우 서로 다른 방식으로 getter/setter를 정의한다.  
 13~17줄 : 먼저, 배열인 경우 `protoAugment`또는 `copyAugment` 함수를 통해 setter를 정의한다.  
 
-[그림-3](그림-3)의 `methodsToPatch` 를 아래 코드를 통해 살펴보자.  
+[그림-3](http://drive.google.com/uc?export=view&id=1KCzjQe3uvx7oib8742TALgenC8xsIf-v)의 `methodsToPatch` 를 아래 코드를 통해 살펴보자.  
 ![core observer array js](http://drive.google.com/uc?export=view&id=140fwROtswfeP04iZvCgT7KJaTgQk8hRx)
 
 12~13줄 : Array.prototype을 prototype으로하는 새로운 객체인 arrayMethods를 생성한다.  
@@ -190,7 +190,7 @@ value가 배열인 경우와 객체인 경우 서로 다른 방식으로 getter/
 #### setter의 역할
 1. 32줄 : Array.prototype의 배열 조작함수를 original이란 이름으로 먼저 호출한다.
 2. 35~44줄 : 새로운 요소를 배열에 추가하는 함수가 호출되었다면 `observeArray` -> `observe` 함수를 호출 하여 추가된 요소(들)를 반응형으로 구성해준다. 
-2. 33줄,46줄 : 배열의 Observer 인스턴스`__ob__`의 dep 인스턴스를 통해 Watcher에 변경을 알려준다.(이 부분의 정확한 이해는 이 문서를 읽다 보면 아~ 하는 순간이 올 것이다. [그림-1](그림-1) 좌측에 Dep과 Watcher 클래스의 관계도가 있다.)
+2. 33줄,46줄 : 배열의 Observer 인스턴스`__ob__`의 dep 인스턴스를 통해 Watcher에 변경을 알려준다.(이 부분의 정확한 이해는 이 문서를 읽다 보면 아~ 하는 순간이 올 것이다. [그림-1](http://drive.google.com/uc?export=view&id=1N0VqBqEfSvByYmcIGzSqhVvx6SOHyRVO) 좌측에 Dep과 Watcher 클래스의 관계도가 있다.)
 
 여기까지가 배열의 setter를 정의하는 부분이다.  
 
@@ -209,14 +209,14 @@ defineReactive 코드를 보자.
 ![core observer definereactive](http://drive.google.com/uc?export=view&id=1D5NPNrLc3TIIt-Wn9mO_Wg6QYk6DmP9q)
 기본적으로 reactivityGetter, reactivitySetter는 내부함수(Closure)로 선언되어 defineReactive가 호출되는 시점에 생성되는 지역변수 dep, val, childOb등을 private하게 접근한다.  
 12줄 : Dep Class의 인스턴스를 반응형 속성을 위해서 생성한다.  
-이쯤에서 아까 보았던 [그림-1](그림-1)의 Dep과 Watcher의 관계도를 다시 보고 오자.
+이쯤에서 아까 보았던 [그림-1](http://drive.google.com/uc?export=view&id=1N0VqBqEfSvByYmcIGzSqhVvx6SOHyRVO)의 Dep과 Watcher의 관계도를 다시 보고 오자.
 
 #### getter의 역할(27~37줄)
 1. 기본적으로 vm._data의 어떤 속성에 접근했을 때 getter가 호출된다.
 2. 28줄 : Dep과 연결이 가능한 Dep.target(watcher 인스턴스)이 존재한다면, 
    - 컴포넌트의 `render`함수가 호출되는 시점에 Dep.target에 컴포넌트 Watcher인스턴스가 설정된다.
 3. 29줄 : `dep.depend()`를 호출함으로서 **dep.subs에는 의존되는 Dep.target(watcher 인스턴스)이 저장** 된다.
-   - [그림-1](그림-1)의 라이프사이클 중 옅은 주황색 둥근 사각형으로 강조 표시한 곳부터 의존성 연결 Step1~6까지를 살펴보자.
+   - [그림-1](http://drive.google.com/uc?export=view&id=1N0VqBqEfSvByYmcIGzSqhVvx6SOHyRVO)의 라이프사이클 중 옅은 주황색 둥근 사각형으로 강조 표시한 곳부터 의존성 연결 Step1~6까지를 살펴보자.
 4. props등을 통해 한 컴포넌트의 data가 다른 컴포넌트에 전달될 수 있고, 하나의 속성을 참조하는 여러개의 computed가 만들어질 수 있다. 즉, 하나의 속성을 참조하는 Watcher는 여러개가 될 수 있다.
 5. computed는 컴포넌트 Watcher가 아니라 computed만을 위한 Watcher가 따로 생성된다.
 6. 최종적으로는 속성값을 반환한다.
@@ -243,7 +243,7 @@ defineReactive 코드를 보자.
 지금까지 살펴본 코드에서 Dep이 생성되는 곳과 사용되는 곳을 알 수 있었다.  
 
 ## Dep과 Watcher
-[그림-1](그림-1)을 다시 한번 보자.  
+[그림-1](http://drive.google.com/uc?export=view&id=1N0VqBqEfSvByYmcIGzSqhVvx6SOHyRVO)을 다시 한번 보자.  
 [![deep-dive-vue.js-v2.5.21-deep-dive-lifecycle][deep-dive-vue.js-v2.5.21-deep-dive-lifecycle]](http://drive.google.com/uc?export=view&id=1N0VqBqEfSvByYmcIGzSqhVvx6SOHyRVO)
 
 Dep과 Watcher는 서로 1...n의 관계를 가진다.  
@@ -252,7 +252,7 @@ data가 반응형 객체가 되는 과정에서의 Dep 생성과 사용은 다�
 2. 객체 및 배열을 위해 Observer(내부 속성 `__ob__`으로 참조)를 생성하는데 Observer마다 하나의 Dep을 생성한다.
    - 이는 배열의 요소별 getter를 구현할 수 없어서 배열 자체에 접근시 배열을 특정 Watcher와 의존시키기 위해 사용된다.
 
-지금까지 [그림-1](그림-1)의 우측 라이프사이클의 `initState`안에서 어떤 일이 일어나는지 살펴보았다.(정확히는 `initData` 이다.)  
+지금까지 [그림-1](http://drive.google.com/uc?export=view&id=1N0VqBqEfSvByYmcIGzSqhVvx6SOHyRVO)의 우측 라이프사이클의 `initState`안에서 어떤 일이 일어나는지 살펴보았다.(정확히는 `initData` 이다.)  
  
 ## $mount
 mount 단계의 flow는 다음과 같다.  
@@ -260,7 +260,7 @@ mount 단계의 flow는 다음과 같다.
 
 render나 update DOM부분은 가볍게 살펴보자.  
 
-[그림-1](그림-1)을 같이 보면서 `_init` 코드를 다시 보면 
+[그림-1](http://drive.google.com/uc?export=view&id=1N0VqBqEfSvByYmcIGzSqhVvx6SOHyRVO)을 같이 보면서 `_init` 코드를 다시 보면 
 ![core instance init js](http://drive.google.com/uc?export=view&id=1ZaHuKE7AeNQVSLAUtlcHltmAIXxpV535)
 27줄 : `initProvide`(이 부분은 플러그인등을 만드는 것과 관련 있는 부분으로 차후에 기회가 생기면 다루도록 한다.)까지 완료 하면  
 28줄 : `created` 라이프사이클 훅이 호출된다.  
@@ -305,7 +305,7 @@ render나 update DOM부분은 가볍게 살펴보자.
 39줄 : 마지막에 내부 함수 `get`을 호출한다. `get` 함수는 `getter`함수를 사용하여 Watcher와 Watcher가 필요한 컴포넌트의 data와 의존성을 맺는 과정을 진행한다.  
 
 
-또 한번, 이쯤에서 [그림-1](그림-1)을 다시 한번 보자.  
+또 한번, 이쯤에서 [그림-1](http://drive.google.com/uc?export=view&id=1N0VqBqEfSvByYmcIGzSqhVvx6SOHyRVO)을 다시 한번 보자.  
 [![deep-dive-vue.js-v2.5.21-deep-dive-lifecycle][deep-dive-vue.js-v2.5.21-deep-dive-lifecycle]](http://drive.google.com/uc?export=view&id=1N0VqBqEfSvByYmcIGzSqhVvx6SOHyRVO)
 
 그림 우측 LifeCycle영역에 보면 주황색으로 일부 Flow에 대해서 강조표시를 해놓았다.  
@@ -314,11 +314,11 @@ render나 update DOM부분은 가볍게 살펴보자.
 코드를 보자
 ![core observer watcher get](http://drive.google.com/uc?export=view&id=1oxac3lSI0s2uQd1ShAHI5UgA-4hQkQyh)
 
-[그림-1](그림-1)과 위 코드를 같이 보며 따라가보자.
-[그림-1](그림-1) 파란색 step 1
+[그림-1](http://drive.google.com/uc?export=view&id=1N0VqBqEfSvByYmcIGzSqhVvx6SOHyRVO)과 위 코드를 같이 보며 따라가보자.
+[그림-1](http://drive.google.com/uc?export=view&id=1N0VqBqEfSvByYmcIGzSqhVvx6SOHyRVO) 파란색 step 1
 - 6줄 : pushTarget(this)를 호출하여 Dep.target값을 현재의 Watcher로 설정한다.  
 
-[그림-1](그림-1) 파란색 step 2
+[그림-1](http://drive.google.com/uc?export=view&id=1N0VqBqEfSvByYmcIGzSqhVvx6SOHyRVO) 파란색 step 2
 - 10줄 : this.getter를 호출하면 전달받은 `updateComponent` 가 호출된다.  
 ![core instance lifecycle updatecomponent](http://drive.google.com/uc?export=view&id=1c0XJM8crXoRSQOWf4w3KsGHvsQqkUe8-)
 
@@ -327,7 +327,7 @@ updateComponent 동작
 - vnode를 생성하기 위해 **render함수가 평가될 때 data의 값을 참조**하게 된다.  
 - **data의 값을 참조할 때 속성 getter가 호출**된다.  
 
-[그림-1](그림-1) 파란색 step 3 ~ 5
+[그림-1](http://drive.google.com/uc?export=view&id=1N0VqBqEfSvByYmcIGzSqhVvx6SOHyRVO) 파란색 step 3 ~ 5
 - **getter는 속성 dep 인스턴스를 통해 현재의 Watcher(Dep.target)와 의존성 연결**이 된다.
 
 컴포넌트의 `render`함수가 수행되면서 vnode가 만들어질때 `render` 함수는 data를 참조하게 된다. 이때 참조되는 data속성의 getter 함수에서 Dep(dep 변수)과 Watcher(Dep.target)가 연결되어 의존 관계가 된다.  
@@ -383,7 +383,7 @@ updateComponent 동작
 그럼 실제 반응형 동작은 어떻게 동작하는지 보자.  
 
 ## change data and re-render
-기본적으로 이 과정은 [그림-1](그림-1)의 빨간색으로 강조된 Step 1 ~ 9 flow를 코드로 설명한다.  
+기본적으로 이 과정은 [그림-1](http://drive.google.com/uc?export=view&id=1N0VqBqEfSvByYmcIGzSqhVvx6SOHyRVO)의 빨간색으로 강조된 Step 1 ~ 9 flow를 코드로 설명한다.  
 demo-grid 컴포넌트의 코드를 보자.
 ![examplges grid js sortBy](http://drive.google.com/uc?export=view&id=1qla8HjnHtf_hPVNNYHJDmQQFTik8d-Ll)
 
@@ -433,8 +433,8 @@ Watcher의 run함수는 최종적으로 Watcher의 `get` 함수, 즉 updateCompo
 (deep dive의 주제 중 'nextTick 깊게 알아보기'를 진행할 때 task queue와 이벤트 루프도 같이 알아보자.)  
 
 지금까지 Vue의 반응형이 어떻게 동작하는지 vue.js의 코드와 함께 살펴보았다.  
-이 동작 flow와 관계를 최대한 하나의 그림에 담은게 [그림-1](그림-1)이다.  
-마지막으로 [그림-1](그림-1)을 다시 한번 보자.  
+이 동작 flow와 관계를 최대한 하나의 그림에 담은게 [그림-1](http://drive.google.com/uc?export=view&id=1N0VqBqEfSvByYmcIGzSqhVvx6SOHyRVO)이다.  
+마지막으로 [그림-1](http://drive.google.com/uc?export=view&id=1N0VqBqEfSvByYmcIGzSqhVvx6SOHyRVO)을 다시 한번 보자.  
 [![deep-dive-vue.js-v2.5.21-deep-dive-lifecycle][deep-dive-vue.js-v2.5.21-deep-dive-lifecycle]](http://drive.google.com/uc?export=view&id=1N0VqBqEfSvByYmcIGzSqhVvx6SOHyRVO)
 
 
