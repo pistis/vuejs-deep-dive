@@ -110,6 +110,7 @@
 	
 ### References
 - https://medium.com/the-vue-point/plans-for-the-next-iteration-of-vue-js-777ffea6fabf Evan You Blog
+- https://medium.com/vue-mastery/evan-you-previews-vue-js-3-0-ab063dec3547 Vue mastery
 - https://jaxenter.com/road-vue-js-3-0-150147.html News Article
 - https://jaxenter.com/whats-coming-vue-js-3-0-152107.html News Article
 - https://www.youtube.com/watch?utm_campaign=Vue.js+News&utm_medium=email&utm_source=Revue+newsletter&v=XkOMOeEAFQI Evan You Presentation Youtube Video
