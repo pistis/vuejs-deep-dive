@@ -398,8 +398,8 @@ demo-grid 컴포넌트의 코드를 보자.
 Watcher의 update함수를 보자.
 ![core observer watcher update](http://drive.google.com/uc?export=view&id=1urFoMhUD2hdN9PDnTgnCtI8AeSrUtHOn)
 4줄 : lazy가 true인 경우는 computed를 위한 Watcher인 경우이다. `filteredData` computed Watcher는 lazy가 true이므로 향후 computed의 값을 참조하는 타이밍에 Watcher의 update가 수행된다.(`filteredData` 재계산)  
-6줄 : sync는 vue-test-utils등 테스트 환경등에서 동기적으로 렌더링하기 위한 속성이며 production환경에서는 사용되지 않는다.
-9줄 : `queueWatcher`는 컴포넌트용 Watcher인 경우 수행되는 코드이다.
+6줄 : sync는 vue-test-utils등 테스트 환경등에서 동기적으로 렌더링하기 위한 속성이며 production환경에서는 사용되지 않는다.  
+9줄 : `queueWatcher`는 컴포넌트용 Watcher(DOM을 업데이트 하는 Watcher)인 경우 수행되는 코드이다.  
 
 `queueWatcher`를 보자.  
 ![core observer scheduler](http://drive.google.com/uc?export=view&id=1vF66TtQO10RmTB-AwUWSeqmQmpXbwuch)
