@@ -72,9 +72,9 @@
 3. update function (src/core/observer/watcher.js) : Watcher의 update함수는 Scheduler의 queueWatcher를 호출하며 Scheduler는 Watcher를 업데이트 대기열에 등록한다.
 4. queueWatcher function (src/core/observer/scheduler.js) : 대기열에 Watcher를 등록(중복 검사)한 후 queue를 비우는 flushSchedulerQueue 함수를 **nextTick**으로 실행한다.
 
-grid component의 `sortBy` 함수가 종료되기까지 1~3번까지는 동기로 수행된다.  
+grid component의 `sortBy` 함수가 종료되기까지 1 ~ 3번까지는 동기로 수행된다.  
 즉, call stack에 쌓여서 순차적으로 처리된다.  
-단, 4번의 `flushSchedulerQueue` 함수는 `sortBy` 함수가 종료되기전에 `nextTick` 에 의해서 비동기로 처리 되도록 task queue에 task가 등록 되며 1~3번 task가 수행되는 call stack에 추가되지 않는다.  
+단, 4번의 `flushSchedulerQueue` 함수는 `sortBy` 함수가 종료되기전에 `nextTick` 에 의해서 비동기로 처리 되도록 task queue에 task가 등록 되며 1 ~ 3번 task가 수행되는 call stack에 추가되지 않는다.  
 
 결국 call stack이 비워지고 다음 이벤트 루프에서 실행된다.  
 그로 인해, sortBy 함수내에서 data를 수정하고 바로 DOM에 엑세스를 하면 변경된 DOM을 참조할 수 없다.  
