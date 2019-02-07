@@ -97,8 +97,8 @@ nextTick의 내부동작을 좀 더 파헤쳐보자.
 
 `nextTick`은 자신이 비동기로 수행할 callback 함수들을 관리하는 `callbacks` 큐를 가지고 있다.  
 3줄 : `nextTick`이 호출되면 callback 함수를 수행하는 함수를 만들어 큐에 삽입한다. (위 sortBy 함수 동작시 4번 step의 `flushSchedulerQueue`함수가 callback이 된다.)  
-11, 24~26줄 : `nextTick`를 호출하며 인자로 전달하는 것이 아닌 Promise의 then으로 등록하는 형태의 callback도 허용한다.([v2.1부터 지원](https://vuejs.org/v2/api/#vm-nextTick)), 단 이 방식을 사용하면 인자로 callback을 전달하는 방식과 실행의 우선순위가 다르다.(이 부분은 나중에 살펴 보자.)  
-16~20줄 : 여기가 중요한 부분이다. macro task와 micro task가 언급되며 useMacroTask변수의 값의 참/거짓 유무에 따라 `callbacks`큐를 비우는 두 타입의 함수를 호출한다.  
+11, 24 ~ 26줄 : `nextTick`를 호출하며 인자로 전달하는 것이 아닌 Promise의 then으로 등록하는 형태의 callback도 허용한다.([v2.1부터 지원](https://vuejs.org/v2/api/#vm-nextTick)), 단 이 방식을 사용하면 인자로 callback을 전달하는 방식과 실행의 우선순위가 다르다.(이 부분은 나중에 살펴 보자.)  
+16 ~ 20줄 : 여기가 중요한 부분이다. macro task와 micro task가 언급되며 useMacroTask변수의 값의 참/거짓 유무에 따라 `callbacks`큐를 비우는 두 타입의 함수를 호출한다.  
 
 왜 nextTick은 두개의 방식중에 하나를 선택하여 callback을 수행할까?    
 
