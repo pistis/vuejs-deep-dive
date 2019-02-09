@@ -14,3 +14,4 @@ Vue.js를 더욱 더 깊이 이해하기 위한 개인 프로젝트이다.
 
 ### Vue.js v2.5.21
 - [Reactivity in depth](v2.5.21/deep-dive-into-reactivity-in-depth.md)
+- [Async Update Queue](v2.5.21/deep-dive-into-async-update-queue.md)
