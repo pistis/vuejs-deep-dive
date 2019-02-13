@@ -2,7 +2,7 @@
 Vue.js를 더욱 더 깊이 이해하기 위한 개인 프로젝트입니다.  
 
 ## Roadmap
-- v2.5.21 소스코드 분석 및 이해하기
+- v2.5.21 소스코드 분석 및 구조 이해하기
 - v3.0에 대한 tracking
 
 ## Table of Contents
