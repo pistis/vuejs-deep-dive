@@ -165,6 +165,28 @@ nextTick에서 우선순위가 높은 micro task만 사용했던 vue.js v2.4의 
 
 결국 27줄이 수행되는 와중에 (여기서의 fn은 data를 변경하는 event listener이다.) 등록되는 next-tick에 전달되는 함수는 macro task로 수행된다.(watcher의 run(render 함수))  
 
+> *여기서 잠깐...*
+> *v2.5는 2018년 마지막 버전이고 2019년 현재 v2.6버전이 릴리즈되었습니다.*
+
+> *nextTick의 큰 변경이 있었으며 내용을 추가합니다.*
+
+## v2.6에서의 nextTick의 변화
+[Release v2.6.0 Macross][Release v2.6.0 Macross]의 '**Important Internal Changes**' 항목을 보면 nextTick의 내부적인 동작 방식에 변화가 생겼으며 이로 인해 의도치 않은 사이드 이펙트가 발생할 수 있다는 내용이 있다.  
+
+> next-tick: revert nextTick to alaways use microtask
+
+변경된 원인과 히스토리에 대해서는 [2.6 Internal Change: Reverting nextTick to Always Use Microtask][reverting nextTick]에 자세히 내용이 정리되어 있다.  
+
+간단하게 정리하면:
+- ~ v2.4 : **중첩된 outer와 inner element가 있을때 이벤트 버블링 사이에서 re-render가 되어 새로운 DOM에 할당된 이벤트 핸들러가 의도치 않게 실행되는 문제**가 있었다.  
+- v2.5 : v2.4까지는 nextTick이 항상 micro task로 수행되어 우선순위가 높았다. 이벤트 핸들러가 수행될 때에는 macro(일반) task로 nextTick이 수행되도록 변경하여 문제를 해결 하였다.
+- v2.6
+   - v2.5의 수정사항이 더 큰 문제들을 발생시켰다. ([more problems of its own][nexttick related issues])
+   - v2.4까지의 방식대로 nextTick은 항상 micro task로 수행되도록 원복하였다.
+   - 기존의(v2.4) 문제는 다른 방법으로 해결하였다. ([src/platforms/web/runtime/modules/events.js][src/platforms/web/runtime/modules/events.js])
+     - **nextTick이 수행될 때의 시간보다 이벤트가 발생한 시간이 더 나중이면 해당 이벤트는 버블링된 것으로 보고 핸들러를 수행하지 않도록 하는 방법**
+
+> *v2.6의 소스코드가 어떻게 변경되었는지에 대한 내용을 추가적으로 확인한 후 문서를 업데이트 할 에정입니다.*
 
 ## 마치며
 처음에는 Vue.js의 반응형의 실체를 이해하기 위해 코드 분석을 시작했지만 공유하면 조금이라도 다른 개발자들에게 도움이 될 수 있지 않을까 하는 마음이 들어 문서로 정리하였다.  
@@ -193,3 +215,8 @@ Written by 피스티스.
 [grid-example-screenshot]: http://drive.google.com/uc?export=view&id=1bj6bFwAwGOgIB2V__tL5b7xqB6uO1PmL
 
 [nexttick function]: http://drive.google.com/uc?export=view&id=1Dgul0JyrBXjQVScjTP5OUHH2uY8maon3
+
+[Release v2.6.0 Macross]: https://github.com/vuejs/vue/releases/tag/v2.6.0
+[reverting nextTick]: https://gist.github.com/yyx990803/d1a0eaac052654f93a1ccaab072076dd
+[nexttick related issues]: https://github.com/vuejs/vue/issues?q=label%3A%22nextTick+related%22+is%3Aclosed
+[src/platforms/web/runtime/modules/events.js]: https://github.com/vuejs/vue/blob/7721febcc3c0594af0abc25fa32d72d63a52942f/src/platforms/web/runtime/modules/events.js#L48-L62
