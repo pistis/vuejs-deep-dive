@@ -45,10 +45,9 @@
 1. setTimeout
 2. setInterval
 3. setImmediate(IE 전용)
-4. requestAnimationFrame
-5. I/O Task
-6. UI rendering
-7. DOM Event
+4. I/O Task
+5. UI rendering
+6. DOM Event
 
 ### micro task
 1. Promise
