@@ -12,3 +12,4 @@ Vue.js를 더욱 더 깊이 이해하기 위한 개인 프로젝트입니다.
 ### Vue.js v2.x
 - [Reactivity in depth](v2.5.21/deep-dive-into-reactivity-in-depth.md)
 - [Async Update Queue](v2.5.21/deep-dive-into-async-update-queue.md)
+- [Template Compilation](v2.5.21/deep-dive-into-template-compilation.md)
