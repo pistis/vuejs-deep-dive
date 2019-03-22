@@ -35,6 +35,10 @@ vue-loader를 사용한다면 아마도 싱글 파일 컴포넌트를 사용하�
 디렉토리 내의 모든 소스코드를 다 살펴보진 못하겠지만 Vue에서 템플릿을 컴파일 하는 과정을 살펴 본다.  
 
 # Deep dive into 'Template Compilation'
+## Flow
+template -> render function -> virtual dom -> real dom의 전체 과정을 그림으로 먼저 보자.  
+![flow-activity-diagram][flow-activity-diagram]
+
 ## 예제로 시작하자
 ![example-input-message][example-input-message]
 
@@ -267,3 +271,5 @@ Written by 피스티스.
 [generate.js]: http://drive.google.com/uc?export=view&id=1Rdc5T2WMZ_s9DLXSyy60ggfBesE68jlP
 
 [render]: http://drive.google.com/uc?export=view&id=1-2TpfEhECl5Y_g4yjvRejEo1kPTQj-NN
+
+[flow-activity-diagram]: http://drive.google.com/uc?export=view&id=1HefuVpCm4R9_KNnOpA2dAI2G_rTO8rFB
