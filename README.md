@@ -1,5 +1,7 @@
 # Deep dive into vue.js (a.k.a Vue.js 톺아보기)
 Vue.js를 더욱 더 깊이 이해하기 위한 개인 프로젝트입니다.  
+![Topic word of vue js (1)](https://user-images.githubusercontent.com/4979560/58269930-867dd900-7dc3-11e9-9bc1-e26cdceeff09.png)
+
 
 ## Roadmap
 - v2.x(v2.5.21 ~) 소스코드 분석 및 구조 이해하기
